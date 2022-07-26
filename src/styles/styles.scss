@@ -1,0 +1,119 @@
+// Processed by the Tailwind postcss plugin
+@tailwind base;
+@tailwind components;
+
+// Styles using Tailwind utilities
+@import "./buttons";
+@import "./layout";
+@import "./typography";
+@layer base {
+  @font-face {
+    font-family: Constantia;
+    font-weight: 400;
+    src: url(/static/fonts/constantia/constantia-regular.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: Constantia;
+    font-weight: 600;
+    src: url(/static/fonts/constantia/constantia-bold.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: Roboto;
+    font-weight: 400;
+    src: url(/static/fonts/roboto/Roboto-Regular.ttf) format("truetype");
+  }
+}
+@tailwind utilities;
+
+.checkbox:checked {
+  background-color: orange;
+  color: red;
+}
+
+.checkbox:checked:before {
+  border: red !important;
+  background-color: red !important;
+}
+// Styles not using Tailwind utilities
+@import "./global";
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: #ffffff00;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  // background: #cbd5e0;
+  background: theme("colors.primary");
+
+  border-radius: 100vh;
+  border: 3px solid #edf2f7;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+main {
+  overflow-x: clip;
+}
+
+.Toastify__toast {
+  border-radius: 0px !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.carousel-open:checked + .carousel-item {
+  position: static;
+  opacity: 100;
+}
+.carousel-item {
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+}
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+  display: block;
+}
+.carousel-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+  color: #2b6cb0; /*Set to match the Tailwind colour you want the active one to be */
+}
