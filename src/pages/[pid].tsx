@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from "react";
-import Page from "components/layout/Page";
 import { Fade, Flip, Zoom } from "react-reveal";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import PlaceComponent from "components/base/PlaceComponent";
@@ -104,7 +103,7 @@ function Main() {
         <div className="flex flex-row container mx-auto items-center justify-between">
           <div className="flex flex-row items-center">
             <img src={"/static/icons/" + "logo.png"} className="w-[150px] mr-12" />
-            {menu.map(item => {
+            {menu.map((item,i) => {
               return (
                 <div
                   className={
@@ -113,6 +112,7 @@ function Main() {
                       ? "text-brand bg-brand bg-opacity-30"
                       : "text-secondary")
                   }
+                  key={"menuHeade" + i}
                   onClick={() => {
                     setActiveMenu(item.name);
                   }}

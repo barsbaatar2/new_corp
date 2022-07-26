@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from "react";
-import Page from "components/layout/Page";
 import Image from "next/image";
 import { Fade, Flip, Zoom } from "react-reveal";
 import { motion, useMotionValue, useTransform } from "framer-motion";
