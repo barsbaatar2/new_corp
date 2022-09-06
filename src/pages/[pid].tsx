@@ -203,7 +203,7 @@ function Main() {
           </div>
         </div>
 
-        <div className="flex bg-body bg-cover bg-opacity-20 bg-center">
+        <div className="flex bg-cover bg-opacity-20 bg-center">
           <div className="flex flex-col w-screen container mx-auto  mb-28">
             <TitleComponent />
             <div className="grid grid-cols-3 gap-10">
